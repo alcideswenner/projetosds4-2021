@@ -1,7 +1,7 @@
 
 const DataTable = () => {
     return (
-        <div className="table-responsive">
+        <div className="table-responsive container">
             <table className="table table-striped table-sm">
                 <thead>
                     <tr>
@@ -14,6 +14,36 @@ const DataTable = () => {
                 </thead>
                 <tbody>
                     <tr>
+                        <td>22/04/2021</td>
+                        <td>Barry Allen2</td>
+                        <td>34</td>
+                        <td>25</td>
+                        <td>15017.00</td>
+                    </tr><tr>
+                        <td>22/04/2021</td>
+                        <td>Barry Allen</td>
+                        <td>34</td>
+                        <td>25</td>
+                        <td>15017.00</td>
+                    </tr><tr>
+                        <td>22/04/2021</td>
+                        <td>Barry Allen</td>
+                        <td>34</td>
+                        <td>25</td>
+                        <td>15017.00</td>
+                    </tr><tr>
+                        <td>22/04/2021</td>
+                        <td>Barry Allen</td>
+                        <td>34</td>
+                        <td>25</td>
+                        <td>15017.00</td>
+                    </tr><tr>
+                        <td>22/04/2021</td>
+                        <td>Barry Allen</td>
+                        <td>34</td>
+                        <td>25</td>
+                        <td>15017.00</td>
+                    </tr><tr>
                         <td>22/04/2021</td>
                         <td>Barry Allen</td>
                         <td>34</td>
