@@ -1,42 +1,28 @@
 package com.alcideswenner.dsvendas.dto;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 import com.alcideswenner.dsvendas.entities.Sale;
-import com.alcideswenner.dsvendas.entities.Seller;
 
-public class SaleDTO implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class SaleDTO {
+
 	private Long id;
 	private Integer visited;
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
-	private Seller seller;
+
+	private SellerDTO seller;
 
 	public SaleDTO() {
-
 	}
 
-	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
-		super();
+	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
 		this.date = date;
-		this.seller = seller;
-	}
-
-	public Seller getSeller() {
-		return seller;
-	}
-
-	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
 
@@ -46,6 +32,7 @@ public class SaleDTO implements Serializable {
 		deals = entity.getDeals();
 		amount = entity.getAmount();
 		date = entity.getDate();
+		seller = new SellerDTO(entity.getSeller());
 	}
 
 	public Long getId() {
@@ -88,8 +75,11 @@ public class SaleDTO implements Serializable {
 		this.date = date;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public SellerDTO getSeller() {
+		return seller;
 	}
 
+	public void setSeller(SellerDTO seller) {
+		this.seller = seller;
+	}
 }
